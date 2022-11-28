@@ -1,0 +1,43 @@
+{
+  "name": "catalog-backend-module-keycloak",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "license": "Apache-2.0",
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.cjs.js",
+    "types": "dist/index.d.ts"
+  },
+  "backstage": {
+    "role": "backend-plugin"
+  },
+  "scripts": {
+    "start": "backstage-cli package start",
+    "build": "backstage-cli package build",
+    "lint": "backstage-cli package lint",
+    "test": "backstage-cli package test",
+    "clean": "backstage-cli package clean",
+    "prepack": "backstage-cli package prepack",
+    "postpack": "backstage-cli package postpack"
+  },
+  "dependencies": {
+    "@backstage/backend-common": "^0.16.0",
+    "@backstage/catalog-model": "1.0.0",
+    "@backstage/backend-tasks": "^0.3.7",
+    "@backstage/config": "^1.0.4",
+    "@keycloak/keycloak-admin-client": "^18.0.2",
+    "@types/uuid": "^8.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.21.0",
+    "@types/supertest": "^2.0.12",
+    "msw": "^0.47.0",
+    "supertest": "^6.2.4"
+  },
+  "files": [
+    "dist"
+  ]
+}
